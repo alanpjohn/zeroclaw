@@ -1127,7 +1127,6 @@ fn curated_models_for_provider(provider_name: &str) -> Vec<(String, String)> {
                 "Gemini 2.5 Flash-Lite (lowest cost)".to_string(),
             ),
         ],
-        "opencode-go" => vec![("default".to_string(), "Default model".to_string())],
         _ => vec![("default".to_string(), "Default model".to_string())],
     }
 }
