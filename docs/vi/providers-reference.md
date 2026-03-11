@@ -2,7 +2,7 @@
 
 Tài liệu này liệt kê các provider ID, alias và biến môi trường chứa thông tin xác thực.
 
-Cập nhật lần cuối: **2026-02-19**.
+Cập nhật lần cuối: **2026-03-10**.
 
 ## Cách liệt kê các Provider
 
