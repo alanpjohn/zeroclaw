@@ -2157,6 +2157,17 @@ mod tests {
     }
 
     #[test]
+    fn resolve_provider_credential_opencode_go_env() {
+        let _env_lock = env_lock();
+        let _provider_guard = EnvGuard::set("OPENCODE_GO_API_KEY", Some("go-test-key"));
+        let _generic_guard = EnvGuard::set("API_KEY", None);
+        let _zeroclaw_guard = EnvGuard::set("ZEROCLAW_API_KEY", None);
+
+        let resolved = resolve_provider_credential("opencode-go", None);
+        assert_eq!(resolved.as_deref(), Some("go-test-key"));
+    }
+
+    #[test]
     fn factory_zai() {
         assert!(create_provider("zai", Some("key")).is_ok());
         assert!(create_provider("z.ai", Some("key")).is_ok());
